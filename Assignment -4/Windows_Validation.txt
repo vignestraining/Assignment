@@ -1,0 +1,6 @@
+windows_validation:
+Tried http:\\localhost in browser and got 503 exception
+Checked the status of defaultAppPool and it is stopped 
+Tried to start the AppPool service but again it got stopped by its own
+changed the DefaultAppPool identity to ApplicationPoolIdentity to solve this issue under advanced settings
+web site started accessing in browser

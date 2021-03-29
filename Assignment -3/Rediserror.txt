@@ -1,0 +1,17 @@
+Redis not started:
+
+Tried to start the service using : Systemctl start redis.service
+I have checked the status of the redis service :Systemctl status redis.service
+checked with : journalctl -xe
+
+got the error:cannot open file or file is not available: /var/log/redis-server.log
+
+then checked with: tail -n 5 /var/log/redis-server.log output was no such file or directory
+
+Then checked with google what is the actual path for redis then its comes /var/log/redis/redis-server.log
+
+log file not present in that mentioned location and it is present under /var/log/redis/redis-server.log so i changed to /var/log/redis/redis-server.log in conf file
+
+Started the service and it got up and running :Systemctl start redis.service
+
+systemctl status redis.service : Its up and running

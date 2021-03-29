@@ -1,0 +1,11 @@
+
+code demo.tf
+
+terraform init
+
+terraform plan -out demo.tfplan
+terraform apply "demo.tfplan"
+
+terraform plan -destroy -out demod.tfplan
+terraform apply "demod.tfplan"
+
